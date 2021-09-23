@@ -2,6 +2,8 @@
 #include "ui_SLVideoDialog.h"
 
 #include <QSettings>
+#include <QAction>
+#include <opencv2/core/core.hpp>
 
 SLVideoDialog::SLVideoDialog(const QString &title, QWidget *parent) : QDialog(parent),ui(new Ui::SLVideoDialog){
     ui->setupUi(this);

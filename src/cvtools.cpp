@@ -53,11 +53,13 @@ cv::Mat logPolar(const cv::Mat &image, float scale){
 
     cv::Mat result(image.size(), image.type());
 
-    IplImage imageIpl(image);
-    IplImage resultIpl(result);
+    //IplImage imageIpl(image);
+    //IplImage resultIpl(result);
 
-    cvLogPolar(&imageIpl, &resultIpl, cv::Point2f(imageIpl.width/2.0, imageIpl.height/2.0), scale);
-
+    //cvLogPolar(&imageIpl, &resultIpl, cv::Point2f(imageIpl.width/2.0, imageIpl.height/2.0), scale);
+    cv::logPolar(image, result, cv::Point2f(image.cols/2.0, image.rows/2.0), scale, 0);
+    cv::warpPolar(image, result, image.size(), cv::Point2f(image.cols/2.0, image.rows/2.0),
+                  cv::min(image.cols/2.0, image.rows/2.0), cv::WARP_POLAR_LOG);
     return result;
 }
 

@@ -133,14 +133,19 @@ RESOURCES += \
 unix:!macx {
     CONFIG += link_pkgconfig
     # Link VTK (no pkg-config, only cmake files, hence we link manually for now)
-    INCLUDEPATH += /usr/include/vtk-6.2/
-    LIBS += -lvtkViewsQt-6.2 -lvtkRenderingQt-6.2 -lvtkGUISupportQt-6.2 -lvtkRenderingCore-6.2 -lvtkCommonExecutionModel-6.2 \
-            -lvtkCommonDataModel-6.2 -lvtkCommonMath-6.2 -lvtkCommonCore-6.2 -lvtkIOImage-6.2 -lvtkCommonColor-6.2 -lvtkFiltersCore-6.2 -lvtkFiltersGeometry-6.2
+#    INCLUDEPATH += /usr/include/vtk-6.2/
+    INCLUDEPATH += /usr/include/vtk-7.1/
+#    LIBS += -lvtkViewsQt-6.2 -lvtkRenderingQt-6.2 -lvtkGUISupportQt-6.2 -lvtkRenderingCore-6.2 -lvtkCommonExecutionModel-6.2 \
+#            -lvtkCommonDataModel-6.2 -lvtkCommonMath-6.2 -lvtkCommonCore-6.2 -lvtkIOImage-6.2 -lvtkCommonColor-6.2 -lvtkFiltersCore-6.2 -lvtkFiltersGeometry-6.2
+    LIBS += -lvtkGUISupportQt-7.1 -lvtkRenderingCore-7.1 -lvtkCommonExecutionModel-7.1 \
+            -lvtkCommonDataModel-7.1 -lvtkCommonMath-7.1 -lvtkCommonCore-7.1 -lvtkIOImage-7.1 -lvtkCommonColor-7.1 -lvtkFiltersCore-7.1 -lvtkFiltersGeometry-7.1
+
     # PCL pkg-config workaround
     LIBS += -lboost_system -lpcl_visualization -lpcl_common -lpcl_io -lpcl_search -lpcl_surface
     # PKG-config libs
-    INCLUDEPATH += /usr/include/pcl-1.8 /usr/include/eigen3/
-    PKGCONFIG += opencv pcl_visualization-1.8 pcl_surface-1.8 pcl_search-1.8 pcl_filters-1.8 pcl_kdtree-1.8 pcl_tracking-1.8 pcl_features-1.8 flann eigen3
+#    INCLUDEPATH += /usr/include/pcl-1.8 /usr/include/eigen3/
+    INCLUDEPATH += /usr/include/pcl-1.10 /usr/include/eigen3/
+    PKGCONFIG += opencv pcl_visualization-1.10 pcl_surface-1.10 pcl_search-1.10 pcl_filters-1.10 pcl_kdtree-1.10 pcl_tracking-1.10 pcl_features-1.10 flann eigen3
 }
 # Windows
 win32 {

@@ -1,7 +1,9 @@
 #ifndef CVTOOLS_H
 #define CVTOOLS_H
 
-#include <opencv2/opencv.hpp>
+#include <opencv2/core/core.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/highgui.hpp>
 
 namespace cvtools{
     void phaseCorrelate(const cv::Mat &im1, const cv::Mat &im2, float &scale, float &angle, cv::Point2f &shift);
