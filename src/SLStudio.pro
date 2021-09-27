@@ -144,8 +144,8 @@ unix:!macx {
     LIBS += -lboost_system -lpcl_visualization -lpcl_common -lpcl_io -lpcl_search -lpcl_surface
     # PKG-config libs
 #    INCLUDEPATH += /usr/include/pcl-1.8 /usr/include/eigen3/
-    INCLUDEPATH += /usr/include/pcl-1.10 /usr/include/eigen3/
-    PKGCONFIG += opencv pcl_visualization-1.10 pcl_surface-1.10 pcl_search-1.10 pcl_filters-1.10 pcl_kdtree-1.10 pcl_tracking-1.10 pcl_features-1.10 flann eigen3
+    INCLUDEPATH += /usr/include/pcl-1.9 /usr/include/eigen3/
+    PKGCONFIG += opencv pcl_visualization-1.9 pcl_surface-1.9 pcl_search-1.9 pcl_filters-1.9 pcl_kdtree-1.9 pcl_tracking-1.9 pcl_features-1.9 flann eigen3
 }
 # Windows
 win32 {
